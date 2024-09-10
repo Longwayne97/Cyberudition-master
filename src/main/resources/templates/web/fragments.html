@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<!-- Topbar Start -->
+<div class="container-fluid bg-light p-0" th:fragment="topbar">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div
+                    class="h-100 d-inline-flex align-items-center border-start border-end px-3"
+            >
+                <small class="fa fa-phone-alt me-2"></small>
+                <small>+84 961 354 192</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center border-end px-3">
+                <small class="far fa-envelope-open me-2"></small>
+                <small>cyberudition@gmail.com</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center border-end px-3">
+                <small class="far fa-clock me-2"></small>
+                <small>Mon - Fri : 09 AM - 09 PM</small>
+            </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-square border-end border-start" href=""
+                ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-square border-end" href=""
+                ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-square border-end" href=""
+                ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="btn btn-square border-end" href=""
+                ><i class="fab fa-instagram"></i
+                ></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+<!-- Navbar Start -->
+<nav
+        class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0"
+        th:fragment="navbar"
+>
+    <a th:href="@{/web/index.html}" class="navbar-brand d-flex align-items-center">
+        <img th:src="@{/img/logocyberudition.jpg}" style="width: 40%" alt="Image">
+    </a>
+    <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-right: 250px">
+        <div class="navbar-nav ms-auto py-3 py-lg-0">
+            <a th:href="@{/index}" class="nav-item nav-link active">TRANG CHỦ</a>
+            <div class="nav-item dropdown">
+                <a
+                        href="#"
+                        class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                >KHOÁ HỌC</a
+                >
+                <div class="dropdown-menu bg-light m-0">
+                    <a th:href="feature.html" class="dropdown-item">Features</a>
+                    <a th:href="appointment.html" class="dropdown-item">Appointment</a>
+                    <a th:href="team.html" class="dropdown-item">Our Team</a>
+                    <a th:href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a th:href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div>
+            <a th:href="@{/about}" class="nav-item nav-link">GIỚI THIỆU</a>
+            <a th:href="@{/center}" class="nav-item nav-link">TRUNG TÂM</a>
+            <a th:href="@{/event}" class="nav-item nav-link">SỰ KIỆN</a>
+            <a th:href="@{/contract}" class="nav-item nav-link">LIÊN HỆ</a>
+        </div>
+    </div>
+    <div class="nav-item">
+        <a th:href="@{#}" class="nav-item nav-link"><i class="fa-regular fa-user fa-xl" style="color: red"></i></a>
+    </div>
+    <div class="nav-item">
+        <button id="connect-button" class="nav-item nav-link"><i class="fa-solid fa-wallet fa-xl" style="color: red"></i></button>
+        <p id="wallet-address">Chưa kết nối</p>
+        <p id="wallet-balance">Số dư: Chưa có</p>
+    </div>
+
+</nav>
+
+<!-- Navbar End -->
+
+<!-- Footer Start -->
+<div
+        class="container-fluid footer mt-5 pt-5 wow fadeIn"
+        data-wow-delay="0.1s" style="background-color: white"
+        th:fragment="footer"
+>
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <img th:src="@{img/logocyberudition.jpg}" style="width:200px" alt="">
+                <p>
+                    Hệ thống giáo dục và đào tạo đa ngôn ngữ hàng đầu Việt Nam
+                    với chương trình giảng dạy cùng các dịch vụ giáo dục theo
+                    tiêu chuẩn quốc tế.
+                </p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square btn-outline-primary me-1" href=""
+                    ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-square btn-outline-primary me-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-square btn-outline-primary me-1" href=""
+                    ><i class="fab fa-instagram"></i
+                    ></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" style="color: black">
+                <h4 class="text-dark mb-4">Hệ thống Cyberudition</h4>
+                <p>
+                    <i class="fa fa-map-marker-alt me-3"></i>VPT: Số 201 Cầu Giấy, phường Dịch Vọng, quận Cầu Giấy, TP Hà Nội
+                </p>
+                <p>
+                    <i class="fa fa-map-marker-alt me-3"></i>19 - 21 - 23 Mạc Đĩnh Chi, Phường Đa Kao, Quận 1, TP. Hồ Chí Minh
+                </p>
+                <h4 class="text-dark mb-4">Kết nối Cyberudition</h4>
+                <p><i class="fa fa-phone-alt me-3"></i>(+84)379 276 922 - 18008119</p>
+                <p><i class="fa fa-facebook me-3"></i>Cyberudition</p>
+                <p><i class="fa fa-envelope me-3"></i>cyberudition@gmail.com</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-dark mb-4">Các khoá học</h4>
+                <a class="btn btn-link text-dark" href="">Tiếng Anh</a>
+                <a class="btn btn-link text-dark" href="">Tiếng Trung</a>
+                <a class="btn btn-link text-dark" href="">Tiếng Hàn</a>
+                <a class="btn btn-link text-dark" href="">Tiếng Nhật</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-dark mb-4">Tìm hiểu thêm</h4>
+                <a class="btn btn-link text-dark" href="">Giới thiệu</a>
+                <a class="btn btn-link text-dark" href="">Trung tâm</a>
+                <a class="btn btn-link text-dark" href="">Sự kiện</a>
+                <a class="btn btn-link text-dark" href="">Liên hệ</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <img th:src="@{img/dcmc.png}" style="width:200px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+</body>
+</html>
